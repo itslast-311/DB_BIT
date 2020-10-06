@@ -1,0 +1,181 @@
+ENTITÀ – RELAZIONE
+Entità: 
+Alunni
+Docenti
+Materie
+Calendario
+Scuola
+Esami
+Preside
+Indirizzo
+
+PERSONA (Alunni - Docenti – Preside) sono persone, quindi sono contraddistinti:
+codice fiscale
+nome
+cognome
+genere
+età
+nazionalità (lingua)
+
+
+
+
+
+
+
+
+
+
+Alunno:
+ID_studente
+classe
+Indirizzo
+un’alunno può essere legato a uno o più docenti
+un’alunno può essere legato a uno indirizzo
+un’alunno può essere legato a uno preside
+un’alunno può essere legato a una scuola
+un’alunno può essere legato a uno o più esami
+un’alunno può essere legato a uno calendario
+
+Docente:
+ID_docente
+n_classsi
+indirizzo
+il docente può essere legato a uno o più studenti
+il docente può essere legato a una o più materie
+il docente può essere legato a una o più classi
+il docente può essere legato a un calendario
+il docente può essere legato a un preside
+il docente può essere legato a uno o più indirizzi
+il docente può essere legato a uno o più esami
+il docente può essere legato a una o più scuole
+
+
+
+
+Preside:
+ID_preside
+nome istituto
+ID_istituto
+il preside può essere legato a uno o più studenti
+il preside può essere legato a una o più materie
+il preside può essere legato a una o più classi
+il preside può essere legato a un calendario
+il preside può essere legato a uno o più docenti
+il preside può essere legato a uno o più indirizzi
+il preside può essere legato a una o più scuole
+
+
+Materie:
+ID_materia
+nome
+Corso
+Ore
+Docente
+La materia può essere legata a uno o più studenti
+La materia può essere legata a uno o più docenti
+La materia può essere legata a un calendario
+La materia può essere legata a uno o più esami
+La materia può essere legata a uno o più scuole
+La materia può essere legata a uno o più indirizzi
+La materia può essere legata a uno o più classi
+
+Indirizzo:
+ID_indirizzo
+Nome
+ID_docente
+n_studenti
+anni
+ID_studente
+L’indirizzo può essere legato a uno o più studenti
+L’indirizzo può essere legato a uno o più docenti
+L’indirizzo può essere legato a uno o più materie
+L’indirizzo può essere legato a uno o più scuole
+L’indirizzo può essere legato a uno o più classi
+L’indirizzo può essere legato a un calendario
+L’indirizzo può essere legato a un preside
+L’indirizzo può essere legato a uno o più esami
+
+
+
+
+
+
+
+
+
+
+
+
+Calendario:
+ID_calendario
+ID_materia
+ID_docenti
+ID_alunni
+ID_corso
+Data_inizio
+Data_fine
+Il calendario può essere legato a uno o più studenti
+Il calendario può essere legato a uno o più docenti
+Il calendario può essere legato a un preside
+Il calendario può essere legato a uno o più materie
+Il calendario può essere legato a uno o più esami
+Il calendario può essere legato a uno o più scuole
+Il calendario può essere legato a uno o più indirizzi
+
+
+
+
+
+
+
+
+
+
+
+
+Scuola:
+ID_scuola
+ID_docenti
+nome
+tipo
+ID_indirizzo
+n_studenti
+indirizzo
+città
+la scuola può essere legata a uno o più studenti
+la scuola può essere legata a uno o più docenti
+la scuola può essere legata a un preside
+la scuola può essere legata a uno o più classi
+la scuola può essere legata a uno o più indirizzi
+la scuola può essere legata a un calendario
+la scuola può essere legata a uno o più studenti
+
+
+
+
+
+
+
+
+
+
+
+
+Esami:
+ID_esami
+ID_corso
+ID_docente
+ID_alunno
+Voto
+Data
+L’esame può essere legato a uno o più studenti
+L’esame può essere legato a uno o più docenti
+L’esame può essere legato a uno o più classi
+L’esame può essere legato a uno o più indirizzi
+L’esame può essere legato a un calendario
+
+
+
+
+
