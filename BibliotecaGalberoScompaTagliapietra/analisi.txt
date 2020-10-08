@@ -1,0 +1,20 @@
+Biblioteca analisi
+
+
+Utente, libro, biblioteca
+
+bibliotecario.
+
+
+
+
+libro: id_libro, id_biblioteca titolo, autore, num.pagine,genere, anno,num.copie, inPrestito, 
+
+
+prestito : id, id_libro, id_utente, id_biblioteca, attivo, datainizo, datafine;  
+
+
+utente : id_utente, id_libro, id_biblioteca nome, cognome, sesso, num_libri_letti, num_prestiti 
+
+
+bibilioteca: id_biblioteca, id_utente, id _libri, nome, 
