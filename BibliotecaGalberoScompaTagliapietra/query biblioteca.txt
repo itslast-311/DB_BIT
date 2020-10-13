@@ -1,0 +1,31 @@
+
+Query Biblioteca
+
+
+1. Tutti i libri prestati ad un utente specifico in ordine cronologico.
+
+
+SELECT *,COUNT(*) FROM "Prestito" GROUP BY id_utente ORDER by datainizio
+
+2 Individua i primi tre lettori che hanno letto più libri.
+
+SELECT COUNT(id), id_utente FROM Prestito GROUP BY id_utente ORDER BY COUNT(id) DESC LIMIT 3;
+
+
+3  Individua tutti i possessori dei libri non ancora rientrati e il titolo degli stessi.
+
+SELECT titolo as LibriInPrestito, Prestito.id_utente FROM Libro JOIN Prestito ON Libro.id = Prestito.id_libro  WHERE attivo = 'true' 
+
+
+4 . Dare lo storico dei libri chiesti in prestito da un utente indicando il periodo.
+
+SELECT titolo as titoliPrestatiNelTempo, Prestito.id_utente FROM Libro JOIN Prestito on Libro.id = Prestito.id_libro where datafine BETWEEN 10/10/2020 and 31/12/2021
+
+5  Fai la classifica dei libri maggiormente prestati.
+
+SELECT titolo as LibriInPrestito, Prestito.id_utente , COUNT(*) FROM Libro JOIN Prestito ON Libro.id = Prestito.id_libro  WHERE attivo = 'true' GROUP by titolo Limit 3
+
+
+ 6. Individua prestiti la cui durata supera i 15gg.
+
+SELECT id FROM Prestito WHERE (datafine-datainzio) >= 15;
